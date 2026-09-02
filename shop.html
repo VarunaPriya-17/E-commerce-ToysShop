@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Toys - WonderToys</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-shapes" style="color:var(--primary-color)"></i> Wonder<span>Toys</span>
+        </a>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop All</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions">
+            <div class="cart-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="shop.html"><i class="fa-solid fa-store"></i> Shop All</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            <li><a href="#" class="mobile-cart-icon"><i class="fa-solid fa-bag-shopping"></i> View Cart (<span
+                        class="cart-count">0</span>)</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Toy Collection</h1>
+                <p style="font-size: 1.2rem; color: #555;">Find the perfect gift for every age and imagination.</p>
+            </div>
+        </section>
+
+        <section class="container shop-layout">
+            <aside class="shop-sidebar">
+                <h3><i class="fa-solid fa-filter"></i> Filters</h3>
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="margin: 1rem 0 0.5rem;">Categories</h4>
+                    <ul class="filter-list">
+                        <li><a href="shop.html">All Toys <span>(8)</span></a></li>
+                        <li><a href="shop.html?category=educational">Educational <span>(3)</span></a></li>
+                        <li><a href="shop.html?category=plush">Plush & Soft <span>(2)</span></a></li>
+                        <li><a href="shop.html?category=action">Action Figures <span>(2)</span></a></li>
+                        <li><a href="shop.html?category=outdoor">Outdoor Play <span>(1)</span></a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="margin: 1rem 0 0.5rem;">Price Range</h4>
+                    <ul class="filter-list">
+                        <li><a href="shop.html?price=under20">Under $20</a></li>
+                        <li><a href="shop.html?price=20to40">$20 - $40</a></li>
+                        <li><a href="shop.html?price=over40">Over $40</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <div class="shop-content">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem;">
+                    <p>Showing all <b style="color:var(--primary-color)">8</b> products</p>
+                    <select
+                        style="padding: 0.5rem; border-radius: 5px; border: 1px solid #ccc; font-family: var(--font-body);">
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Alphabetical</option>
+                    </select>
+                </div>
+
+                <div class="product-grid" id="shopGrid">
+                    <!-- Products dynamically inserted here by script.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-shapes"></i> Wonder<span>Toys</span></h3>
+                    <p>We believe in the magic of play. Every toy we select is designed to spark joy, imagination, and
+                        learning in children around the world.</p>
+                </div>
+                <div class="footer-col" style="padding-left: 20px;">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop Toys</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Categories</h4>
+                    <ul>
+                        <li><a href="shop.html?category=educational">Educational</a></li>
+                        <li><a href="shop.html?category=plush">Plushies</a></li>
+                        <li><a href="shop.html?category=action">Action Vehicles</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="socials">
+                        <a href="index.html"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="index.html"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="index.html"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="index.html"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 WonderToys. All rights reserved. Crafted with ♥.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal-overlay" id="cartOverlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h2><i class="fa-solid fa-bag-shopping"></i> Your Cart</h2>
+                <button class="close-cart" id="closeCart"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-footer">
+                <div class="total-row"><span>Total:</span> <span id="cartTotal">$0.00</span></div>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="cart-modal-overlay checkout-overlay" id="checkoutModalOverlay"
+        style="justify-content: center; align-items: center;">
+        <div class="cart-modal"
+            style="transform: translateY(-50px); opacity: 0; transition: all 0.4s ease; max-height: 90vh; border-radius: 20px; overflow-y: auto;">
+            <div class="cart-header">
+                <h2><i class="fa-solid fa-truck-fast"></i> Checkout</h2>
+                <button class="close-cart" id="closeCheckout"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="checkoutForm" style="display: flex; flex-direction: column; gap: 1.5rem; padding-top: 1rem;">
+                <div style="background: var(--bg-color); padding: 1rem; border-radius: 10px; margin-bottom: 1rem;">
+                    <h3 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Order Summary</h3>
+                    <div class="total-row" style="margin-bottom: 0.5rem; font-size: 1rem;"><span>Cart Subtotal:</span>
+                        <span id="checkoutSubtotalDisplay">$0.00</span>
+                    </div>
+                    <div class="total-row" style="margin-bottom: 0.5rem; font-size: 1rem; display: none;"
+                        id="codFeeRow"><span>COD Charge (10%):</span>
+                        <span id="checkoutCodFeeDisplay">$0.00</span>
+                    </div>
+                    <div class="total-row" style="margin-bottom: 0; font-size: 1.3rem;"><span>Total to Pay:</span>
+                        <span id="checkoutTotalDisplay" style="color: var(--primary-color);">$0.00</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="margin-bottom: 1rem; font-size: 1.1rem;">Shipping Details</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label for="coFirstName" style="font-size: 0.9rem;">First Name</label>
+                            <input type="text" id="coFirstName" required
+                                style="width: 100%; padding: 0.8rem; border: 2px solid #eee; border-radius: 8px;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label for="coLastName" style="font-size: 0.9rem;">Last Name</label>
+                            <input type="text" id="coLastName" required
+                                style="width: 100%; padding: 0.8rem; border: 2px solid #eee; border-radius: 8px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label for="coPhone" style="font-size: 0.9rem;">Phone Number</label>
+                    <input type="tel" id="coPhone" required
+                        style="width: 100%; padding: 0.8rem; border: 2px solid #eee; border-radius: 8px;">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label for="coAddress" style="font-size: 0.9rem;">Delivery Address</label>
+                    <textarea id="coAddress" rows="3" required
+                        style="width: 100%; padding: 0.8rem; border: 2px solid #eee; border-radius: 8px; font-family: inherit;"></textarea>
+                </div>
+
+                <div>
+                    <h3 style="margin-bottom: 1rem; font-size: 1.1rem;">Payment Method</h3>
+                    <div style="display: flex; gap: 1rem; flex-direction: column;">
+                        <label
+                            style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 2px solid #eee; border-radius: 8px; cursor: pointer;">
+                            <input type="radio" name="paymentMethod" value="online" checked
+                                style="width: 1.2rem; height: 1.2rem;">
+                            <strong>Online Payment (GPay)</strong>
+                        </label>
+                        <label
+                            style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 2px solid #eee; border-radius: 8px; cursor: pointer;">
+                            <input type="radio" name="paymentMethod" value="cod" style="width: 1.2rem; height: 1.2rem;">
+                            <strong>Cash on Delivery (+10% Charge)</strong>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="onlinePaymentSection"
+                    style="text-align: center; background: #f9f9f9; padding: 1.5rem; border-radius: 8px; border: 1px dashed #ccc;">
+                    <p style="margin-bottom: 1rem; font-weight: bold; color: var(--text-color);">Scan to Pay with GPay
+                    </p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg"
+                        alt="GPay QR Code"
+                        style="width: 150px; height: 150px; border-radius: 10px; margin-bottom: 1rem;">
+                    <p style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">(Placeholder QR. Replace with your
+                        actual GPay QR)</p>
+                    <div class="form-group" style="margin-bottom: 0; text-align: left;">
+                        <label for="transactionId" style="font-size: 0.9rem;">Transaction ID / Reference Number</label>
+                        <input type="text" id="transactionId" placeholder="e.g. UPI Ref No."
+                            style="width: 100%; padding: 0.8rem; border: 2px solid #eee; border-radius: 8px;">
+                    </div>
+                </div>
+
+                <button type="submit" class="checkout-btn" style="margin-top: 1rem;" id="confirmOrderBtn">Confirm Online
+                    Payment</button>
+            </form>
+        </div>
+    </div>
+    <style>
+        #checkoutModalOverlay.active .cart-modal {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
